@@ -1,38 +1,162 @@
-.App {
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.url-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.analyze-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.analyze-button:hover {
+  background-color: #0056b3;
+}
+
+.loader {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.loader-text {
+  font-size: 1.25rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.loader-bar {
+  width: 80%;
+  height: 5px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  animation: loader 1.5s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.metrics {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.metrics h2 {
+  font-size: 1.75rem;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.metric {
+  font-size: 1.125rem;
+  color: #495057;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.metric span:first-child {
+  font-weight: bold;
+  color: #343a40;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #dc3545;
+  margin-top: 20px;
+}
+.metrics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-header {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.metric-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.metric-title {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.metric-value {
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: bold;
 }
